@@ -10,6 +10,7 @@ import os
 from functools import reduce
 from collections import Counter
 
+import time
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,21 +63,36 @@ def frequency_alphabet(text):
         each letter is sorted by frequency and then by ascii
 
     '''
-    list_alphabet = Counter(string_txt).most_common()
+    t = time.time()
+#    list_alphabet = Counter(string_txt).most_common()
+    list_alphabet = dict()
+    for letter in string_txt:
+        if letter in list_alphabet.keys():
+            list_alphabet[letter] += 1
+        else:
+            list_alphabet[letter] = 1
+    list_alphabet = list(zip(list_alphabet.keys(),list_alphabet.values()))
+    
 #    print(list_alphabet)
     
-    list_frequency_values = sorted(list(set([value[1] for value in list_alphabet])))
-#    print(list_frequency_values)
+    list_frequency_values = sorted(list(set([value[1] for value in list_alphabet])), reverse = True)
+    print(list_frequency_values)
+    
+    list_alphabet_temp = []
+    list_alphabet_final = []
     
     #for each frequency
     for value_frequency in list_frequency_values:
-        
-        
-        for 
-            if machin < value_frequency:
-                break
+        #letter sorted
+        list_alphabet_temp = sorted([element[0] for element in list_alphabet if element[1] == value_frequency], key = ord)
+        #tuple sorted
+        list_alphabet_temp = [(element, value_frequency) for element in list_alphabet_temp]
+        #append
+        list_alphabet_final.append(list_alphabet_temp[0])
+#        print(list_alphabet_final)
+    print(time.time() - t)
     
-    return list_alphabet
+    return list_alphabet_final
 
 def sort_alphabet(alphabet):
     '''
@@ -115,20 +131,21 @@ def sort_alphabet(alphabet):
 # =============================================================================
 
 path = os.path.dirname(os.path.abspath(__file__)).replace('\\','/') + '/data'
-file = '/textesimple.txt'
+file = '/alice.txt'
 
-print('path : ' + path)
-print('file : ' + file)
+#print('path : ' + path)
+#print('file : ' + file)
 
 string_txt = path_to_string(path + file)
 
-print('string : ' + string_txt)
+#print('string : ' + string_txt)
 
 # =============================================================================
 # Alphabet
 # =============================================================================
 
 frequency_a = frequency_alphabet(string_txt)
+print(len(frequency_a))
 print(frequency_a)
 
 
