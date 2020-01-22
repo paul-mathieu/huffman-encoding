@@ -8,9 +8,8 @@ Created on Wed Jan 22 09:03:48 2020
 import os
 
 from functools import reduce
-from collections import Counter
 
-import time
+#import time
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,6 +35,7 @@ def path_to_string(path):
         string of the text
         
     '''
+
     with open (path, "r") as myfile:
         #reduce to convert a list of string into a single string
         return reduce(lambda x, y : x + y, myfile.readlines())
@@ -45,7 +45,7 @@ def path_to_string(path):
 # Alphabet creation
 # =============================================================================
 
-def frequency_alphabet(text):
+def frequency_alphabet(string_txt):
     '''
     Create a frequency alphabet
     
@@ -63,7 +63,8 @@ def frequency_alphabet(text):
         each letter is sorted by frequency and then by ascii
 
     '''
-    t = time.time()
+    
+#    t = time.time()
 #    list_alphabet = Counter(string_txt).most_common()
     list_alphabet = dict()
     for letter in string_txt:
@@ -90,34 +91,46 @@ def frequency_alphabet(text):
         #append
         list_alphabet_final.append(list_alphabet_temp[0])
 #        print(list_alphabet_final)
-    print(time.time() - t)
+#    print(time.time() - t)
     
     return list_alphabet_final
 
-def sort_alphabet(alphabet):
-    '''
-    Sort an alphabet
-    
-    Input
-    ----------
-    dict_alphabet : dict
-    
-    
-    Output
-    ----------
-    list_alphabet : list
-        list of tuple which contains sorted tuple
-        tuple => letter, frequency
-        each letter is sorted by frequency and then by ascii
-    '''
-#    sorted_list_alphabet = Counter(dict_alphabet).most_common()
-##    sorted(liste, key = ord)
-#    for key, value in dict_alphabet.items():
-#        pass
-#    
-#    return sorted_list_alphabet
-    pass
+# =============================================================================
+# Création de l'arbre
+# =============================================================================
 
+class Tree:
+    
+    def __init__(self, letter, value = None, left_child = None, right_child = None):
+        '''
+        Initialisation of the object
+        
+        Input
+        ----------
+        letter : str
+            letter of the leaf
+        value : int
+        left_child : Tree
+        right_child : Tree
+        '''
+        
+        self.letter = letter
+        
+        self.left_child = left_child
+        self.right_child = right_child
+        
+        if not value is None:
+            self.value = value
+        else:
+            left_child_value = self.left_child.value if not self.left_child.value is None else 0
+            right_child_value = self.right_child.value if not self.right_child.value is None else 0
+            self.value = left_child_value + right_child_value
+    
+    def alphabet_to_dag(self, alphabet):
+        '''
+        '''
+        pass
+        
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,7 +158,7 @@ string_txt = path_to_string(path + file)
 # =============================================================================
 
 frequency_a = frequency_alphabet(string_txt)
-print(len(frequency_a))
+#print(len(frequency_a))
 print(frequency_a)
 
 
