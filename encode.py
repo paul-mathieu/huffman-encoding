@@ -63,10 +63,18 @@ def frequency_alphabet(text):
 
     '''
     list_alphabet = Counter(string_txt).most_common()
-    print(list_alphabet)
+#    print(list_alphabet)
     
     list_frequency_values = sorted(list(set([value[1] for value in list_alphabet])))
-    print(list_frequency_values)
+#    print(list_frequency_values)
+    
+    #for each frequency
+    for value_frequency in list_frequency_values:
+        
+        
+        for 
+            if machin < value_frequency:
+                break
     
     return list_alphabet
 
