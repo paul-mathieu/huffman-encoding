@@ -120,28 +120,17 @@ class Tree:
         self.right_child = right_child
         
         if not value is None:
+            #value of the node (if leaf)
             self.value = value
         else:
+            #value of the node (if not leaf)
             left_child_value = self.left_child.value if not self.left_child.value is None else 0
             right_child_value = self.right_child.value if not self.right_child.value is None else 0
+            #sum of value at the right and at the left
             self.value = left_child_value + right_child_value
     
     def alphabet_to_dag(self, alphabet):
-        '''
-        '''
-        pass
-        
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# PART II : Application
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-# =============================================================================
-# Transformation of the text file into string
-# =============================================================================
+        '''                                                                                                                                                                                                                                                                                                  
 
 path = os.path.dirname(os.path.abspath(__file__)).replace('\\','/') + '/data'
 file = '/alice.txt'
