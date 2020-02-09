@@ -50,7 +50,6 @@ class HuffmanCoding:
     def __init__(self, path, file, export_file=None):
         """
         file initialization
-        :return:
         """
         self.export_file = export_file
         self.path = path + file
@@ -58,8 +57,12 @@ class HuffmanCoding:
         self.text = None
         self.current_directory = path
 
+        self.file_name = file[len(file) - file[::-1].index('/'):len(file) - file[::-1].index('.') - 1]
+
         if self.export_file is None:
-            self.export_file = '/encoded/encode.bin'
+            self.export_file = '/encoded/' + \
+                               self.file_name + \
+                               '_comp.bin'
 
     def set_dictionary(self):
         """
@@ -317,7 +320,7 @@ class HuffmanCoding:
         """
         dict_values = self.binary_alphabet()
         dict_to_list = list(zip(dict_values.keys(), dict_values.values()))
-        destination = self.current_directory + '/encoded/alphabet_bin.txt'
+        destination = self.current_directory + '/encoded/' + self.file_name + '_bin.txt'
 
         file = open(destination, "w")
 
@@ -346,7 +349,7 @@ class HuffmanCoding:
             self
         """
         list_values = self.sorted_alphabet()[::-1]
-        destination = self.current_directory + '/encoded/alphabet_freq.txt'
+        destination = self.current_directory + '/encoded/' + self.file_name + '_freq.txt'
 
         file = open(destination, "w")
 
