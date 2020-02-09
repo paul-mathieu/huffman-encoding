@@ -71,6 +71,7 @@
       <workItem from="1580460019118" duration="636000" />
       <workItem from="1580472972690" duration="1055000" />
       <workItem from="1581143328415" duration="8009000" />
+      <workItem from="1581262061949" duration="3016000" />
     </task>
     <servers />
   </component>
@@ -94,30 +95,30 @@
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="466" y="212" key="FileChooserDialogImpl/0.0.1368.912@0.0.1368.912" timestamp="1580379763455" />
-    <state width="409" height="750" key="GridCell.Tab.0.bottom" timestamp="1580459372167">
+    <state width="409" height="607" key="GridCell.Tab.0.bottom" timestamp="1581264617074">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="409" height="750" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1580459372167" />
-    <state width="409" height="750" key="GridCell.Tab.0.center" timestamp="1580459372166">
+    <state width="409" height="607" key="GridCell.Tab.0.bottom/0.0.1368.912@0.0.1368.912" timestamp="1581264617074" />
+    <state width="409" height="607" key="GridCell.Tab.0.center" timestamp="1581264617073">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="409" height="750" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1580459372166" />
-    <state width="409" height="750" key="GridCell.Tab.0.left" timestamp="1580459372165">
+    <state width="409" height="607" key="GridCell.Tab.0.center/0.0.1368.912@0.0.1368.912" timestamp="1581264617073" />
+    <state width="409" height="607" key="GridCell.Tab.0.left" timestamp="1581264617073">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="409" height="750" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1580459372165" />
-    <state width="409" height="750" key="GridCell.Tab.0.right" timestamp="1580459372166">
+    <state width="409" height="607" key="GridCell.Tab.0.left/0.0.1368.912@0.0.1368.912" timestamp="1581264617073" />
+    <state width="409" height="607" key="GridCell.Tab.0.right" timestamp="1581264617074">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state width="409" height="750" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1580459372166" />
+    <state width="409" height="607" key="GridCell.Tab.0.right/0.0.1368.912@0.0.1368.912" timestamp="1581264617074" />
     <state x="374" y="99" key="SettingsEditor" timestamp="1580287987417">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
     <state x="374" y="99" key="SettingsEditor/0.0.1368.912@0.0.1368.912" timestamp="1580287987417" />
-    <state x="357" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1580289079804">
+    <state x="357" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1581262152261">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
-    <state x="357" y="281" key="com.intellij.ide.util.TipDialog/0.0.1368.912@0.0.1368.912" timestamp="1580289079804" />
+    <state x="357" y="281" key="com.intellij.ide.util.TipDialog/0.0.1368.912@0.0.1368.912" timestamp="1581262152261" />
     <state x="109" y="36" key="new project wizard" timestamp="1580474027093">
       <screen x="0" y="0" width="1368" height="912" />
     </state>
@@ -132,7 +133,7 @@
     <state x="348" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1368.912@0.0.1368.912" timestamp="1581143828743" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Polytech_sem6_PROJ631_Huffman_encoding$py3.coverage" NAME="py3 Coverage Results" MODIFIED="1580459351864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Polytech_sem6_PROJ631_Huffman_encoding$py3.coverage" NAME="py3 Coverage Results" MODIFIED="1581264617040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Polytech_sem6_PROJ631_Huffman_encoding$encode.coverage" NAME="encode Coverage Results" MODIFIED="1580293779861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
