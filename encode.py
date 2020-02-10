@@ -298,7 +298,7 @@ class HuffmanCoding:
             #            print(octet)
             file.write(int(octet, 2).to_bytes(len(octet) // 8, byteorder='big'))
         # management of the last character whose size is not necessarily equal to 8
-
+        # '0' * 0 if it's the last octet
         octet = binary_text[index_begin:] + '0' * (8 - len(binary_text[index_begin:]))
         file.write(int(octet, 2).to_bytes(-(-len(octet) // 8), byteorder='big'))
 
@@ -461,6 +461,7 @@ class HuffmanCoding:
         # print(encoded_text[:8])
         # for element in encoded_text:
         #     print(bin(element))
+        # '0' * 0 if it's not the last octet
         encoded_text = ''.join(['0' * (8 - len(bin(element)[2:])) + bin(element)[2:] for element in encoded_text])
         encoded_text, last_octet = encoded_text[:-32], encoded_text[-32:]
 
@@ -516,9 +517,9 @@ print('Initialisation...')
 # ~~~~ file name ~~~~ #
 
 path = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/')
-file = '/data/alice.txt'
+# file = '/data/alice.txt'
 # file = '/data/textesimple.txt'
-# file = '/data/textesimple_sans_espaces.txt'
+file = '/data/textesimple_sans_espaces.txt'
 
 # print('path : ' + path)
 # print('file : ' + file)
@@ -533,7 +534,7 @@ encoding = HuffmanCoding(path, file)
 # print (encoding.text)
 
 # print(encoding.binary_list())
-# print(encoding.binary_alphabet())
+print(encoding.binary_alphabet())
 # print(encoding.frequency_alphabet())
 
 
