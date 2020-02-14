@@ -518,8 +518,8 @@ print('Initialisation...')
 
 path = os.path.dirname(os.path.abspath(__file__)).replace('\\', '/')
 # file = '/data/alice.txt'
-# file = '/data/textesimple.txt'
-file = '/data/textesimple_sans_espaces.txt'
+file = '/data/textesimple.txt'
+# file = '/data/textesimple_sans_espaces.txt'
 
 # print('path : ' + path)
 # print('file : ' + file)
@@ -543,9 +543,9 @@ print(encoding.binary_alphabet())
 print('Exporting...')
 
 encoding.encode_file_bin()
-encoding.encode_file_txt()
+# encoding.encode_file_txt()
 encoding.export_freq_alphabet()
-encoding.export_binary_alphabet()
+# encoding.export_binary_alphabet()
 
 print('Compression Ratio: ', end='')
 print(encoding.compression_ratio())
